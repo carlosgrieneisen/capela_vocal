@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capela Vocal | Coro de Câmara — Porto Alegre</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            cream: "#FCF4B6",
+            ivory: "#FFFDF5",
+            terracotta: "#EB9961",
+            crimson: "#CB4F57",
+            wine: "#7A1745",
+            plum: "#331436",
+            surface: "#FFFDF5",
+            "surface-dim": "#FBF5DC",
+            "surface-card": "#FFFFFF",
+            "plum-muted": "#563659",
+            "plum-light": "#7A5A7D",
+          },
+          fontFamily: {
+            serif: ["Playfair Display", "serif"],
+            sans: ["Plus Jakarta Sans", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    @layer base {
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #FFFDF5;
+        color: #331436;
+      }
+    }
+
+    ::selection {
+      background-color: #CB4F57;
+      color: #FFFDF5;
+    }
+  </style>
+</head>
+
+<body class="bg-ivory font-sans text-plum antialiased selection:bg-crimson selection:text-ivory">
+
+  <!-- HEADER NAVIGATION -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-ivory/95 backdrop-blur-md border-b border-plum/5 shadow-[0_2px_16px_rgba(51,20,54,0.03)]">
+    <div class="h-20 max-w-6xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+      <!-- Logo & Identidade -->
+      <a class="flex items-center gap-3.5 group" href="#inicio">
+        <img
+          src="rsc/capvoclogo.jpg"
+          alt="Capela Vocal Logo"
+          class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02] mix-blend-multiply"
+        />
+        <div class="hidden sm:flex flex-col pl-1">
+          <span class="font-serif font-bold text-lg tracking-wide text-plum leading-none">
+            CAPELA VOCAL
+          </span>
+          <span class="text-[10px] tracking-[0.18em] font-semibold text-crimson uppercase mt-1">
+            Coro de Câmara • Porto Alegre
+          </span>
+        </div>
+      </a>
+
+      <!-- Links de Navegação -->
+      <nav class="flex items-center gap-6 md:gap-10">
+        <a
+          class="text-xs uppercase tracking-[0.2em] font-medium text-plum/75 hover:text-crimson transition-colors duration-200"
+          href="#concertos"
+        >
+          Apresentações
+        </a>
+        <a
+          class="text-xs uppercase tracking-[0.2em] font-medium text-plum/75 hover:text-crimson transition-colors duration-200"
+          href="#elenco"
+        >
+          O Coro
+        </a>
+        <a
+          class="text-xs uppercase tracking-[0.2em] font-medium text-plum/75 hover:text-crimson transition-colors duration-200"
+          href="#contato"
+        >
+          Contato
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="w-full pt-20">
+
+    <!-- 1. HERO & QUEM SOMOS -->
+    <section
+      id="inicio"
+      class="relative w-full bg-gradient-to-b from-cream/35 via-ivory to-ivory py-16 md:py-24"
+    >
+      <div class="max-w-5xl mx-auto px-6 lg:px-12 flex flex-col items-center text-center gap-10">
+        <div class="flex flex-col items-center gap-3 max-w-2xl">
+          <span class="text-xs uppercase tracking-[0.25em] text-crimson font-semibold">
+            Coro de Câmara • Porto Alegre
+          </span>
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-plum font-normal tracking-tight mt-1">
+            Capela Vocal
+          </h1>
+          <p class="text-base md:text-lg text-plum/75 leading-relaxed font-light mt-3">
+            Associação de Cantores Porto-Alegrense, amantes da música e entusiastas de canto coral.
+            Nosso repertório possui maior ênfase em clássicas obras pra coros, como também temos
+            repertórios modernos, em múltiplas línguas.
+          </p>
+        </div>
+
+        <!-- Imagem Hero Principal (rsc/img1.jpg) -->
+        <div class="w-full max-w-4xl">
+          <figure class="rounded-xl overflow-hidden shadow-[0_12px_40px_rgba(51,20,54,0.08)]">
+            <img
+              src="rsc/img1.jpg"
+              alt="Capela Vocal reunida em concerto"
+              class="w-full h-auto object-cover block"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. AGENDA / CALENDÁRIO DE APRESENTAÇÕES -->
+    <section
+      id="concertos"
+      class="w-full py-20 md:py-28 bg-gradient-to-b from-ivory via-cream/25 to-ivory relative"
+    >
+      <div class="max-w-3xl mx-auto px-6 lg:px-8 flex flex-col items-center">
+        <!-- Cabeçalho da Seção -->
+        <div class="text-center mb-16">
+          <span class="text-xs font-semibold uppercase tracking-[0.25em] text-crimson block mb-2">
+            Temporada
+          </span>
+          <h2 class="font-serif text-3xl md:text-4xl text-plum font-normal">
+            Próximos Concertos
+          </h2>
+          <p class="text-sm text-plum/70 mt-2 font-light">
+            Apresentações oficiais na cidade de Porto Alegre
+          </p>
+        </div>
+
+        <!-- Linha do Tempo de Eventos -->
+        <div class="relative w-full max-w-2xl">
+          <!-- Linha vertical central contínua -->
+          <div class="absolute left-4 md:left-1/2 top-2 bottom-2 w-px bg-plum/15 -translate-x-1/2"></div>
+
+          <div class="flex flex-col gap-12 md:gap-16">
+            <!-- Evento 1 -->
+            <div class="relative flex flex-col md:flex-row items-start md:items-center pl-12 md:pl-0">
+              <div class="absolute left-4 md:left-1/2 top-1.5 md:top-auto w-3 h-3 rounded-full bg-ivory border-2 border-crimson -translate-x-1/2 z-10"></div>
+              <div class="md:w-1/2 md:pr-10 md:text-right">
+                <span class="text-xs uppercase tracking-[0.2em] text-plum font-bold block">
+                  21/11 • 18h
+                </span>
+                <span class="text-[11px] text-plum/60 tracking-wider uppercase font-medium">
+                  Entrada Franca
+                </span>
+              </div>
+              <div class="md:w-1/2 md:pl-10 mt-1 md:mt-0">
+                <h3 class="font-serif text-xl font-medium text-plum">
+                  Concerto Vivaldi I
+                </h3>
+                <p class="text-xs text-plum/70 font-light mt-1 leading-relaxed">
+                  Paróquia do Redentor — Rua José do Patrocínio, 570, Cidade Baixa
+                </p>
+              </div>
+            </div>
+
+            <!-- Evento 2 -->
+            <div class="relative flex flex-col md:flex-row items-start md:items-center pl-12 md:pl-0">
+              <div class="absolute left-4 md:left-1/2 top-1.5 md:top-auto w-3 h-3 rounded-full bg-ivory border-2 border-crimson -translate-x-1/2 z-10"></div>
+              <div class="md:w-1/2 md:pr-10 md:text-right">
+                <span class="text-xs uppercase tracking-[0.2em] text-plum font-bold block">
+                  22/11 • 17h
+                </span>
+                <span class="text-[11px] text-plum/60 tracking-wider uppercase font-medium">
+                  Entrada Franca
+                </span>
+              </div>
+              <div class="md:w-1/2 md:pl-10 mt-1 md:mt-0">
+                <h3 class="font-serif text-xl font-medium text-plum">
+                  Concerto Vivaldi II
+                </h3>
+                <p class="text-xs text-plum/70 font-light mt-1 leading-relaxed">
+                  Capela Nosso Senhor Jesus do Bom Fim — Av. Osvaldo Aranha, 462, Bom Fim
+                </p>
+              </div>
+            </div>
+
+            <!-- Evento 3 -->
+            <div class="relative flex flex-col md:flex-row items-start md:items-center pl-12 md:pl-0">
+              <div class="absolute left-4 md:left-1/2 top-1.5 md:top-auto w-3 h-3 rounded-full bg-ivory border-2 border-crimson -translate-x-1/2 z-10"></div>
+              <div class="md:w-1/2 md:pr-10 md:text-right">
+                <span class="text-xs uppercase tracking-[0.2em] text-plum font-bold block">
+                  28/11 • 19:45
+                </span>
+                <span class="text-[11px] text-plum/60 tracking-wider uppercase font-medium">
+                  Entrada Franca
+                </span>
+              </div>
+              <div class="md:w-1/2 md:pl-10 mt-1 md:mt-0">
+                <h3 class="font-serif text-xl font-medium text-plum">
+                  Apresentação na Noite dos Museus
+                </h3>
+                <p class="text-xs text-plum/70 font-light mt-1 leading-relaxed">
+                  Catedral Anglicana da Santíssima Trindade — Rua dos Andradas, 880, Centro Histórico
+                </p>
+              </div>
+            </div>
+
+            <!-- Evento 4 -->
+            <div class="relative flex flex-col md:flex-row items-start md:items-center pl-12 md:pl-0">
+              <div class="absolute left-4 md:left-1/2 top-1.5 md:top-auto w-3 h-3 rounded-full bg-ivory border-2 border-crimson -translate-x-1/2 z-10"></div>
+              <div class="md:w-1/2 md:pr-10 md:text-right">
+                <span class="text-xs uppercase tracking-[0.2em] text-plum font-bold block">
+                  05/12 • 18h
+                </span>
+                <span class="text-[11px] text-plum/60 tracking-wider uppercase font-medium">
+                  Entrada Franca
+                </span>
+              </div>
+              <div class="md:w-1/2 md:pl-10 mt-1 md:mt-0">
+                <h3 class="font-serif text-xl font-medium text-plum">
+                  Concerto Natalino com Coro Jovem da OSPA
+                </h3>
+                <p class="text-xs text-plum/70 font-light mt-1 leading-relaxed">
+                  Igreja Nossa Senhora da Conceição — Av. Independência, 230, Independência
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. O CORO: FOTO AMPLIADA & ELENCO DOS CANTORES -->
+    <section
+      id="elenco"
+      class="w-full py-20 md:py-28 bg-ivory relative"
+    >
+      <div class="max-w-5xl mx-auto px-6 lg:px-12 flex flex-col items-center gap-16">
+        <!-- Foto do Grupo em Destaque Maior (rsc/img2.jpg) -->
+        <div class="w-full max-w-4xl">
+          <figure class="rounded-xl overflow-hidden shadow-[0_12px_40px_rgba(51,20,54,0.08)]">
+            <img
+              src="rsc/img2.jpg"
+              alt="Integrantes do coro Capela Vocal reunidos na escadaria"
+              class="w-full h-auto object-cover block"
+            />
+          </figure>
+          <p class="text-xs text-plum/50 font-medium mt-3 text-center tracking-wider uppercase">
+            Capela Vocal • Porto Alegre / RS
+          </p>
+        </div>
+
+        <!-- Elenco dos Cantores & Maestro -->
+        <div class="w-full flex flex-col gap-12 pt-4">
+          <div class="text-center max-w-lg mx-auto">
+            <span class="text-xs uppercase tracking-[0.25em] text-crimson font-semibold">
+              Integrantes
+            </span>
+            <h2 class="font-serif text-3xl md:text-4xl text-plum font-normal mt-2">
+              Elenco do Coro
+            </h2>
+          </div>
+
+          <!-- Maestro em Destaque -->
+          <div class="flex flex-col items-center text-center">
+            <span class="text-xs uppercase tracking-[0.22em] font-bold text-crimson mb-1.5">
+              Maestro
+            </span>
+            <p class="font-serif text-2xl text-plum font-medium">
+              Cosmas Grieneisen
+            </p>
+          </div>
+
+          <!-- Naipes Vocais -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 text-center sm:text-left pt-4">
+            <!-- Soprano -->
+            <div class="flex flex-col gap-3">
+              <h3 class="text-xs uppercase tracking-[0.2em] font-bold text-plum pb-2 border-b border-plum/10">
+                Soprano
+              </h3>
+              <ul class="space-y-2 text-sm text-plum/80 font-light">
+                <li>Adriana Carolina Broilo</li>
+                <li>Cristina Simon</li>
+                <li>Julia Bonai Portela</li>
+                <li>Kariny Schoenfeldt</li>
+                <li>Luka Millermeister Araujo</li>
+                <li>Pablo Simon Pinho</li>
+                <li>Samara Mendonça Gonçalves</li>
+              </ul>
+            </div>
+
+            <!-- Contralto -->
+            <div class="flex flex-col gap-3">
+              <h3 class="text-xs uppercase tracking-[0.2em] font-bold text-plum pb-2 border-b border-plum/10">
+                Contralto
+              </h3>
+              <ul class="space-y-2 text-sm text-plum/80 font-light">
+                <li>Ana Francisca Grings</li>
+                <li>Elisa Dias Mendonça</li>
+                <li>Julia Schwingel Broilo</li>
+                <li>Karinba Friedrich</li>
+                <li>Maria Eduarda Schoenhofen</li>
+                <li>Milina Sato</li>
+                <li>Ritieli dos Santos de Campos</li>
+              </ul>
+            </div>
+
+            <!-- Tenor -->
+            <div class="flex flex-col gap-3">
+              <h3 class="text-xs uppercase tracking-[0.2em] font-bold text-plum pb-2 border-b border-plum/10">
+                Tenor
+              </h3>
+              <ul class="space-y-2 text-sm text-plum/80 font-light">
+                <li>Gabriel Drese Salazar</li>
+                <li>Gabriel Friedrich Duarte</li>
+                <li>Ronel Alberti da Rosa</li>
+              </ul>
+            </div>
+
+            <!-- Baixo -->
+            <div class="flex flex-col gap-3">
+              <h3 class="text-xs uppercase tracking-[0.2em] font-bold text-plum pb-2 border-b border-plum/10">
+                Baixo
+              </h3>
+              <ul class="space-y-2 text-sm text-plum/80 font-light">
+                <li>Philip de Lacy White</li>
+                <li>Thiago Luiz Sousa</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CONTATO & PRODUÇÃO -->
+    <section
+      id="contato"
+      class="w-full py-20 md:py-28 bg-gradient-to-b from-ivory via-cream/30 to-cream/40"
+    >
+      <div class="max-w-4xl mx-auto px-6 lg:px-8 flex flex-col items-center text-center gap-10">
+        <div class="max-w-xl flex flex-col items-center gap-3">
+          <span class="text-xs uppercase tracking-[0.25em] text-crimson font-semibold">
+            Comunicação &amp; Produção
+          </span>
+          <h2 class="font-serif text-3xl md:text-4xl text-plum font-normal">
+            Contato Direto
+          </h2>
+          <p class="text-sm text-plum/75 font-light leading-relaxed">
+            Para convites artísticos, apresentações solenes, temporadas sinfônicas ou parcerias
+            institucionais em Porto Alegre e turnês:
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16 pt-2 text-sm">
+          <a
+            class="flex flex-col items-center gap-1 text-plum hover:text-crimson transition-colors"
+            href="mailto:contato@capelavocal.art.br"
+          >
+            <span class="text-[11px] uppercase tracking-[0.2em] text-plum/50 font-semibold">
+              Email
+            </span>
+            <span class="font-medium">contato@capelavocal.art.br</span>
+          </a>
+
+          <a
+            class="flex flex-col items-center gap-1 text-plum hover:text-crimson transition-colors"
+            href="https://wa.me/5551984523320"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="text-[11px] uppercase tracking-[0.2em] text-plum/50 font-semibold">
+              WhatsApp
+            </span>
+            <span class="font-medium">+55 (51) 98452-3320</span>
+          </a>
+
+          <a
+            class="flex flex-col items-center gap-1 text-plum hover:text-crimson transition-colors"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="text-[11px] uppercase tracking-[0.2em] text-plum/50 font-semibold">
+              Instagram
+            </span>
+            <span class="font-medium">@capelavocal.poa</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-ivory border-t border-plum/10 text-plum py-12">
+    <div class="max-w-5xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-plum/60 font-light">
+      <div class="flex items-center gap-3">
+        <img
+          src="rsc/capvoclogo.jpg"
+          alt="Capela Vocal Logo"
+          class="h-8 w-auto object-contain mix-blend-multiply"
+        />
+        <span class="text-[11px] tracking-[0.18em] uppercase text-plum font-medium">
+          Capela Vocal • Porto Alegre
+        </span>
+      </div>
+      <p>© 2026 Capela Vocal — Coro de Câmara. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
